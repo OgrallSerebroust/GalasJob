@@ -1,11 +1,28 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}
     APPTRIX test
 {% endblock %}
 {% block body_of_page %}
+    <div class="container-fluid" id="background_style"></div>
+    <div class="container-fluid" id="navbar">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><i class="fas fa-fire"></i> APPTRIX tindor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button class="btn btn-light">
+                    Войдите
+                </button>
+            </div>
+        </nav>
+    </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            СОЗДАТЬ АККАУНТ
+            <button type="button" class="btn btn-primary btn-lg" id="button_login">
+                СОЗДАТЬ АККАУНТ
+            </button>
         </div>
     </div>
 {% endblock %}
