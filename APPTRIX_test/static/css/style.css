@@ -1,0 +1,54 @@
+.row > .btn
+{
+    width: auto;
+}
+
+.navbar-brand:hover
+{
+    color: #FFF;
+}
+
+.navbar-brand, .navbar-toggler
+{
+    color: #FFF;
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+#navbar > nav
+{
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+#navbarSupportedContent > .btn
+{
+    margin-left: auto;
+    font-size: 16pt;
+    color: #FE3F5C;
+    padding: 0.2em 1em 0.2em 1em;
+}
+
+#background_style
+{
+    background: url("../img/style/2.jpg");
+    background-size: cover;
+    height: 100vh;
+    filter: brightness(30%);
+    z-index: -1;
+    position: absolute;
+}
+
+#navbar
+{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 80%)
+}
+
+#button_login
+{
+    margin-top: 40vh;
+    padding: 0.5em 1em 0.5em 1em;
+    background: linear-gradient(45deg, #FD2A75, #FF5C3B);
+    border: 0 ;
+    border-radius: 1.5rem;
+}
