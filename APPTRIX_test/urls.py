@@ -5,7 +5,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('', views.apptrix_test_main),
-    path('api/clients/create/', include('django.contrib.auth.urls')),
+    path('api/clients/create/', views.apptrix_registration, name='registration'),
+    path('api/clients/create/confirm', views.CreateClientAPIView.as_view(), name='reg_confirm'),
     path('api/list', views.ProfileList.as_view()),
 ]
 

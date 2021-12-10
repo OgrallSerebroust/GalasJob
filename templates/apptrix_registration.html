@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-    APPTRIX test
+    APPTRIX test registration
 {% endblock %}
 {% block body_of_page %}
     <div class="container-fluid" id="background_style"></div>
@@ -20,10 +20,13 @@
     </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <form class="button-form">
-                <button type="submit" formaction="{% url 'registration' %}" class="btn btn-primary btn-lg" id="button_login">
-                    СОЗДАТЬ АККАУНТ
-                </button>
+            <form method="post" action="{% url 'reg_confirm'%}">
+                {% csrf_token %}
+                <table>
+                    {{ user_form }}
+                    {{ profile_form }}
+                </table>
+                <input type="submit" value="ЗАРЕГИСТРИРОВАТЬСЯ">
             </form>
         </div>
     </div>

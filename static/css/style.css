@@ -15,6 +15,11 @@
     font-weight: bold;
 }
 
+.button-form
+{
+    width: auto;
+}
+
 #navbar > nav
 {
     padding-left: 0.6em;
