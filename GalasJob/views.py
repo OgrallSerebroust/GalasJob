@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Category, Currency, CurrencyImg
+from .serializers import CategorySerializer, CurrencySerializer,CurrencyIMGSerializer
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 
 def index(request):
@@ -21,3 +23,33 @@ def currency(request, category_id, currency_id):
     currency = Currency.objects.get(id=currency_id)
     imgs = CurrencyImg.objects.filter(currency=currency)
     return render(request, "currency.html", {"currency": currency, "imgs": imgs})
+
+
+class CategoryListCreateAPIView(ListCreateAPIView):
+    serializer_class = CategorySerializer
+    queryset = Category.objects.all()
+
+
+class CategoryRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    serializer_class = CategorySerializer
+    queryset = Category.objects.all()
+
+
+class CurrencyListCreateAPIView(ListCreateAPIView):
+    serializer_class = CurrencySerializer
+    queryset = Currency.objects.all()
+
+
+class CurrencyRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    serializer_class = CurrencySerializer
+    queryset = Currency.objects.all()
+
+
+class CurrencyIMGListCreateAPIView(ListCreateAPIView):
+    serializer_class = CurrencyIMGSerializer
+    queryset = CurrencyImg.objects.all()
+
+
+class CurrencyIMGRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    serializer_class = CurrencyIMGSerializer
+    queryset = CurrencyImg.objects.all()
