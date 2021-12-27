@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    GalasJob
+{% endblock %}
+{% block body_of_page %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            {{ currency.name }}
+        </div>
+        <div class="row justify-content-center">
+            {{ currency.price }}
+        </div>
+        <ul class="row">
+            {% if not imgs %}
+                Увы, изображений для этой валюты ещё нет(
+            {% endif %}
+            {% for img in imgs %}
+            <li>
+                <img src="{{ img.image.url }}" alt="{{ currency.name }}" >
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

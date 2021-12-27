@@ -6,12 +6,15 @@
 {% block body_of_page %}
     <div class="container-fluid">
         <div class="row justify-content-center">
-            Все типы валют:
+            Валюты этого типа:
+            {% if not currencies %}
+                Увы, данная категория ещё пуста
+            {% endif %}
         </div>
         <ul class="row">
-            {% for category in categories %}
+            {% for currency in currencies %}
                 <li>
-                    <a href="{{ category.id }}/">{{ category.name }}</a>
+                    <a href="currency/{{ currency.id }}/">{{ currency.name }}</a>
                 </li>
             {% endfor %}
         </ul>
