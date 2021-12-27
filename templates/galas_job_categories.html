@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    GalasJob
+{% endblock %}
+{% block body_of_page %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            Все типы валют:
+        </div>
+        <ul class="row">
+            {% for category in categories %}
+                <li>
+                    <a href="/categories/{{ category.id }}/">{{ category.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

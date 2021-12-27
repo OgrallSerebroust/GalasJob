@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_filters',
     'MyPage.apps.MypageConfig',
     'APPTRIX_test.apps.ApptrixTestConfig',
+    'GalasJob.apps.GalasjobConfig',
 ]
 
 MIDDLEWARE = [
