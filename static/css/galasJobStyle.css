@@ -1,0 +1,17 @@
+body
+{
+    font-size: 14pt;
+    background-color: #181A20;
+    color: #FFFFFF;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+#content_header
+{
+    background-color: #0B0E11;
+    border-radius: 15px;
+}
